@@ -1,3 +1,19 @@
+/*
+  Set up an user on mongo:
+    1.- Enter to mongo and select the "database"
+    2.- Create an user using this command:
+      db.createUser({
+        user:"<UserName>",
+        pwd:"<UserPassword>",
+        roles: [{
+                role:"<roles>",  //BuiltIn Roles: (read, readWrite)
+                db:"<Database name>"
+            }]
+    3.-Re-run mongod using auth:
+        > mongod --auth
+    4.- Success!
+    })
+*/
 {
   "db": {
     "name": "db",
@@ -5,7 +21,7 @@
     "host":"localhost",
     "port":27017,
     "database":"fake-nova",
-    "username":"",
-    "password":""
+    "username":"test-user",
+    "password":"test-user123"
   }
 }
