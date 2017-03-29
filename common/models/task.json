@@ -1,0 +1,48 @@
+{
+  "name": "task",
+  "plural": "tasks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "task_type": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "hours": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "ticket_number": {
+      "type": "number",
+      "required": true
+    },
+    "creationDate":{
+        "type": "date",
+        "required":true
+    },
+    "updateDate":{
+      "type":"date",
+      "required":true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
